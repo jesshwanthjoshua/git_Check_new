@@ -1,0 +1,137 @@
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/J.S.Joshua/Desktop/git_Check_new/.git/
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ ls -a
+./  ../  .git/  chapter1.txt
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ code chapter1.txt
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git add chapter1.txt
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git commit -m "My first commit on chapter1"
+[master (root-commit) 2c895c2] My first commit on chapter1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ touch chapter2.txt chapter3.txt
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ code chapter2.txt chapter3.txt
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git log
+commit 2c895c2fb05e1a4d3393a19a5b7c75b57ccb8484 (HEAD -> master)
+Author: Jesshwanth S. Joshua <34447801+jesshwanthjoshua@users.noreply.github.com>
+Date:   Thu Jun 27 18:01:38 2024 +0530
+
+    My first commit on chapter1
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git add .
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git commit -m "My second commit on chapter2 and chapter3"
+[master 6eb41ed] My second commit on chapter2 and chapter3
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git log
+commit 6eb41ed5e5ee5665c1502ca164ff17336e0ae695 (HEAD -> master)
+Author: Jesshwanth S. Joshua <34447801+jesshwanthjoshua@users.noreply.github.com>
+Date:   Thu Jun 27 18:05:16 2024 +0530
+
+    My second commit on chapter2 and chapter3
+
+commit 2c895c2fb05e1a4d3393a19a5b7c75b57ccb8484
+Author: Jesshwanth S. Joshua <34447801+jesshwanthjoshua@users.noreply.github.com>
+Date:   Thu Jun 27 18:01:38 2024 +0530
+
+    My first commit on chapter1
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git status 
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   chapter3.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git diff chapter3.txt
+diff --git a/chapter3.txt b/chapter3.txt
+index 25f3cc6..5877661 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-My third file to check on June 27.
+\ No newline at end of file
++hjeflKELKEJ WKGJ ;AWJG AH EIN AWMOIGAOoijaorgj iroah noir ,o; j
+\ No newline at end of file
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git checkout chapter3.txt
+Updated 1 path from the index
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git remote add origin https://github.com/jesshwanthjoshua/git_Check_new.git
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/jesshwanthjoshua/git_Check_new.git'
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/jesshwanthjoshua/git_Check_new.git'
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (master)
+$ git branch -M main
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (main)
+$ git push -u origin main
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (7/7), 627 bytes | 125.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/jesshwanthjoshua/git_Check_new.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+J.S.Joshua@MSI MINGW64 ~/Desktop/git_Check_new (main)
+$
